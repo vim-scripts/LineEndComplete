@@ -1,0 +1,29 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=4267
+
+DESCRIPTION
+The i_CTRL-X_CTRL-L completion completes entire, identical lines. Sometimes,
+you need completion of an almost-identical line with differences in indent or
+a prefix string.
+This plugin provides a completion mapping that takes the base text before the
+cursor, and offers the missing parts of other lines that also have this base
+text. If you know the exact common text, or to whittle down the number of
+matches, you can also select the completion base yourself before invoking the
+mapping.
+
+SEE ALSO
+- Check out the CompleteHelper.vim plugin page (vimscript #3914) for a full
+  list of insert mode completions powered by it.
+
+USAGE
+In insert mode, invoke the completion via CTRL-X $.
+Alternatively, you can pre-select the base (via select or visual mode) before
+invoking the completion. This ensures that the best context for completion is
+chosen.
+
+You can then search forward and backward via CTRL-N / CTRL-P, as usual.
+
+CTRL-X $                Find matches starting with the MotionComplete-base
+                        text before the cursor, until the end of that line.
+
+{Visual}CTRL-X $        Find matches starting with the selected text, until
+                        the end of that line.
